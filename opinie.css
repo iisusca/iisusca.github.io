@@ -1,0 +1,97 @@
+@font-face {
+  font-family:'Gambetta';
+  src: url(fonts/Gambetta_Complete/Fonts/Variable/Gambetta-VariableItalic.ttf) format(woff);
+}
+@font-face {
+  font-family:'Gambetta2';
+  src: url(fonts/Gambetta_Complete/Fonts/Variable/Gambetta-Variable.ttf) format(woff);
+}
+body {
+  
+  background-image: linear-gradient(to right top, #db8a85, #dd8e89, #df928e, #e09792, #e29b97);
+  background-image:url(photos/pattern.svg);
+    background-attachment: fixed;
+    background-size:cover;
+    
+}
+
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+.title {
+    font-size: 120px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+  color:#eff0f0;
+  outline: none;
+  text-align: center;
+  position:relative;
+  display:inline-flexbox;
+  z-index:1;
+}
+
+.title:hover {
+    font-variation-settings: "wght" 582; 
+    letter-spacing: 1px;
+  }
+
+  .text {
+    padding:10px;
+    position:relative;
+    display:grid;
+    font-family:"Gambetta2", sans-serif;
+    font-weight: 500;
+    text-align:left;
+      letter-spacing: 2px;
+      color:#eff0f0;
+      width:80%;
+    font-size: 27px;
+    left:10%;
+    line-height: 1.5;
+    transition: 700ms ease;
+    
+  }
+
+  .back {
+    font-family:  serif;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    color:#eff0f0;
+    border: 1px solid #fff;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:absolute;
+    overflow:hidden;
+    margin: 20px 20px;
+    left:2.5vw;
+    top:5%;
+    z-index:3;
+
+  }
+
+  a, a:visited {
+    color: inherit;
+}
+  
+  .back:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background : #fff;
+    left: 100%;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.3;
+  }
+  
+  .back:hover:before {
+    width: 100%;
+    left:0;
+  }

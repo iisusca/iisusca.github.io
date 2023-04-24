@@ -1,0 +1,233 @@
+@font-face {
+    font-family:'Gambetta';
+    src: url(fonts/Gambetta_Complete/Fonts/Variable/Gambetta-Variable.ttf) format(woff);
+  }
+
+body {
+    margin:0;
+    padding:0;
+    font-size:17px;
+    line-height: 1.6;
+    font-family:"Gambetta", serif;
+    color:#2f293d;
+    overflow: hidden;
+}
+
+#wrapper {
+    position: relative;
+  width:100%;
+  min-height:55vw;
+  overflow: hidden;
+}
+.top {
+    background-color:#f4e0de ;
+    z-index:2;
+    width:50vw;
+    font-weight: 500;
+    
+}
+
+.bottom {
+    background-color:#e29b97 ;
+    z-index:1;
+    
+    font-weight: 500;
+    font-size:25px;
+}
+.layer {
+    position:absolute;
+    width:100vw;
+    min-height: 55vw;
+    overflow: hidden;
+
+}
+
+.video {
+    position: absolute;
+    top:28vh;
+    left:5vw;
+    z-index: 1;
+    
+    
+}
+
+.info-dump {
+    position: absolute;
+    top:25vh;
+    left:60vw;
+    font-size:24px;
+    width:38vw;
+    z-index: 1;
+    line-height: 1.6;
+    background-color:#e29b97;
+    padding:10px;
+    border-radius:8px;
+}
+
+
+.title {
+    position: absolute;
+    top: 10vh;
+    left: 30vw;
+    width:20vw;
+    font-weight: 600;
+    font-size:x-large;
+    z-index: 1;
+    color:#f4e0de;
+}
+
+.pic1 {
+    background-image: url("photos/concubine.jpeg");
+    background-size:contain;
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 5vh;
+    left: 25vw;
+    width:25vw;
+    height:15vh;
+    z-index:0;
+    border-radius: 7px;
+
+}
+
+.pic2 {
+    background-image: url("photos/Argint.jpg");
+    position: absolute;
+    width:10%;
+    height: 25%;
+    background-size:cover;
+    left:54%;
+    top:40%;
+    border-radius:10px;
+}
+
+.pic3 {
+    background-image: url("photos/Argint2.jpg");
+    position: absolute;
+    width:20%;
+    height:40%;
+    background-size:cover;
+    left:33%;
+    top:40%;
+    border-radius:10px;
+}
+
+.pic4 {
+    position:absolute;
+    background-image: url("photos/osmanthus.jpg");
+    
+    height:40%;
+    background-size:cover;
+    left:70%;
+    width:24%;
+    top:40%;
+    border-radius:10px;
+}
+
+
+.info-dump2 {
+    padding:7px;
+    background-color:#f4e0de;
+    border-radius: 10px;
+    position: absolute;
+    top:25vh;
+    left:7%;
+    width:20%;
+    font-size: larger;
+}
+
+.pic23desc {
+    padding:7px;
+    background-color:#f4e0de;
+    border-radius: 10px;
+    position: absolute;
+    top:25vh;
+    left:33%;
+    width:30%;
+    
+}
+
+.pic4desc {
+    padding:7px;
+    background-color:#f4e0de;
+    border-radius: 10px;
+    position: absolute;
+    top:25vh;
+    left:70%;
+    width:23%;
+}
+
+.back {
+    font-family: serif;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    color:#430B1E;
+    border: 1px solid #430B1E;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:absolute;
+    overflow:hidden;
+    margin: 20px 20px;
+    left:2.5vw;
+    top:5%;
+    z-index:3;
+
+  }
+
+  a, a:visited {
+    color: inherit;
+}
+  
+.back:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background : #A0AFA2;
+    left: 100%;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.3;
+  }
+  
+
+  .back:hover:before {
+    width: 100%;
+    left:0;
+  }
+
+  .handle{
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: #e29b97;
+    width:5px;
+    top:0;
+    left: 50%;
+    z-index:3;
+  }
+  
+  .skewed .handle{
+    top:50%;
+    transform:rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin:top;
+  }
+  
+  .skewed .top{
+    transform: skew(-30deg);
+    margin-left:-1000px;
+    width: calc(50vw + 1000px);
+  }
+  
+  .skewed .top .poem, .info-dump, .pic1, .video, .title{
+    transform: skew(30deg);
+    margin-left:1000px;
+  }
+  
+  @media(max-width:768px){
+    body{
+      font-size:75%;
+    }
+  }

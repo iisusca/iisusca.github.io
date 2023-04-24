@@ -1,0 +1,170 @@
+@font-face {
+    font-family:'Gambetta';
+    src: url(fonts/Gambetta_Complete/Fonts/Variable/Gambetta-Variable.ttf) format(woff);
+  }
+html { 
+    background: url("photos/map2.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+body {
+
+    overflow: hidden;
+
+}
+
+
+
+
+.Kallah, .Su, .Ahne, .Hua, .Luzhou, .Yun {
+    position:absolute;
+    z-index:3;
+}
+
+.Kallah {
+    top:0%;
+    left:15%;
+    width:30%;
+    height:30%;
+}
+
+.Su {
+    bottom:0;
+    left:0;
+    width:50%;
+    height:33%;
+}
+
+.Ahne {
+    right:0;
+    bottom: 0;
+    height:30%;
+    width: 50%;
+}
+
+.Yun {
+    left: 50%;
+    top: 0%;
+    width: 25%;
+    height: 45%;
+}
+
+.Luzhou {
+    top:0;
+    right:0;
+    width:25%;
+    height:50%;
+}
+
+.Hua {
+    top:33%;
+    width:33%;
+    height:33%;
+    left:30%;
+}
+
+.Ahne-text, .Kallah-text, .Su-text, .Yun-text, .Luzhou-text, .Hua-text {
+    position:absolute;
+    visibility:hidden;
+    opacity:0;
+    transition:visibility 0.1s linear,opacity 0.1s linear;
+    top:70%;
+    width:80%;
+    left:10%;
+    height:10%;
+    font-family: 'Gambetta', sans-serif;
+    font-weight: 500;
+    pointer-events:none;
+    background-color: #f4e0de;
+    border-color:#e29b97;
+    border-width: 14px;
+    border-radius: 5px;
+    border-style: solid;
+    color:#080507;
+    font-size:25px;
+    padding-top: 25px;
+    padding-left:25px;
+    padding-bottom: 10px;
+    padding-right:10px;
+    font-weight: 300;
+}
+
+.Su-text, .Ahne-text {
+    top:10%;
+    z-index:3;
+}
+.Ahne:hover ~ .Ahne-text { 
+    visibility: visible;
+    opacity:1;
+
+}
+
+.Hua:hover ~ .Hua-text {
+
+    visibility: visible;
+    opacity:1;
+}
+
+.Kallah:hover ~ .Kallah-text {
+    visibility: visible;
+    opacity:1;
+}
+
+.Luzhou:hover ~ .Luzhou-text {
+    visibility: visible;
+    opacity:1;
+}
+
+.Su:hover ~ .Su-text {
+    visibility: visible;
+    opacity:1;
+
+}
+
+.Yun:hover ~ .Yun-text {
+    visibility: visible;
+    opacity:1;
+}
+
+.back {
+    font-family: 'Gambetta', serif;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    color:#430B1E;
+    border: 1px solid #430B1E;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:absolute;
+    overflow:hidden;
+    margin: 20px 20px;
+    left:2.5vw;
+    top:5%;
+    z-index:3;
+
+  }
+
+  a, a:visited {
+    color: inherit;
+}
+  
+.back:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background : #A0AFA2;
+    left: 100%;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.3;
+  }
+  
+
+  .back:hover:before {
+    width: 100%;
+    left:0;
+  }

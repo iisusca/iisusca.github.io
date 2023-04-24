@@ -1,0 +1,118 @@
+
+body {
+    background-color: #F1C1C5;
+}
+
+@font-face {
+  font-family:'Gambetta';
+  src: url(fonts/Gambetta_Complete/Fonts/Variable/Gambetta-Variable.ttf) format(woff);
+}
+table, th, td {
+   
+    padding: 7px 40px 7px 20px;
+  }
+th, td {
+border: 1px solid;
+border: 1px solid #430B1E;
+border-radius: 10px;
+}
+table {
+    position:absolute;
+    width:90%;
+    height: 50%;
+    top:15%;
+    left:5vw;
+    text-align: center;
+   
+    transition: all 0.5s ease;
+    font-size:larger;
+    
+    
+  }
+
+  @keyframes anim-th {
+    100% {background-color: #A0AFA2;
+    color:#5C2B3E;
+    }
+  }
+
+  @keyframes anim-td {
+    100% {
+        color: #f4e0de;
+    background-color:#430B1E;
+    }
+  }
+
+  td {
+    width:35%;
+    background-color: #f4e0de;
+    color:#430B1E;
+
+  }
+
+  th {
+    padding-top: 15px;
+    padding-bottom:15px;
+    font-size: larger;
+    width:35%;
+    background-color: #5C2B3E;
+    color:#A0AFA2;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) ease;
+
+  }
+
+  th:hover {
+    animation-name:anim-th;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+
+  td:hover {
+    animation-name:anim-td;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  .text {
+    font-family: "Gambetta", sans-serif;
+    font-weight: 500;
+    color:#430B1E
+  }
+  .back {
+    font-family: 'Gambetta', serif;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    color:#430B1E;
+    border: 1px solid #430B1E;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:absolute;
+    overflow:hidden;
+    margin: 20px 20px;
+    left:2.5vw;
+    top:5%;
+    z-index:3;
+
+  }
+
+  a, a:visited {
+    color: inherit;
+}
+  
+.back:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background : #A0AFA2;
+    left: 100%;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.3;
+  }
+  
+
+  .back:hover:before {
+    width: 100%;
+    left:0;
+  }

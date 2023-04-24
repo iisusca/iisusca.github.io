@@ -1,0 +1,160 @@
+@font-face {
+    font-family:'Gambetta';
+    src: url(fonts/Gambetta_Complete/Fonts/Variable/Gambetta-Variable.ttf) format(woff);
+  }
+body {
+    height:100%;
+    width:100%;
+    background-color: #2f293d;
+    overflow: hidden;
+}
+
+.bo-img, .lian-img, .ning-img, .princess-img {
+    
+    position:absolute;
+    width:34%;
+    height:100%;
+    overflow:hidden;
+    background-position: center center;
+    background-size: 190%;
+    clip-path: polygon(32% 0, 100% 0, 68% 100%, 0% 100%);
+    -webkit-transition: background-size 250ms ease-in-out;
+    transition: background-size 250ms ease-in-out;
+
+
+}
+
+
+.ning-img {
+    
+    left:-5%;
+    background-image: url("photos/ning3.jpg");
+    background-position: 81%;
+    
+}
+
+.bo-img {
+    background-image: url("photos/bo3.jpg");
+    left:20%;
+    background-position: 66%;
+
+    
+}
+
+.lian-img {
+    background-image: url("photos/lian4.jpg");
+    left:45%;
+    background-position: 35%;
+
+    
+}
+
+.princess-img {
+    background-image: url("photos/zhen2.jpg");
+        left:70%;
+        background-position: 62% 0%;
+    }
+
+
+.ning, .lian, .bo, .princess {
+    font-family: 'Gambetta', sans-serif;
+    font-weight:bolder;
+    pointer-events:none;
+
+    top:70%;
+    left:10%;
+    position:absolute;
+    text-align:left;
+    background-color: #f4e0de;
+    border-color:#e29b97;
+    border-width: 14px;
+    border-radius: 5px;
+    border-style: solid;
+    color:#080507;
+    font-size:35px;
+    padding-top: 25px;
+    padding-left:25px;
+    padding-bottom: 10px;
+    padding-right:10px;
+    width:80%;
+    height:20%;
+    font-weight: 300;
+    visibility:hidden;
+    opacity:0;
+    transition:visibility 0.1s linear,opacity 0.1s linear;
+}
+
+.ning-img:hover ~ .ning {
+    visibility:visible;
+    opacity:1;
+}
+
+.ning-img:hover {
+    background-size: 250%;
+}
+
+.princess-img:hover ~ .princess {
+    visibility:visible;
+    opacity:1;
+}
+
+.princess-img:hover {
+    background-size: 250%;
+}
+
+.bo-img:hover ~ .bo {
+    visibility:visible;
+    opacity:1;
+}
+
+.bo-img:hover {
+    background-size: 250%;
+}
+
+.lian-img:hover ~ .lian {
+    visibility:visible;
+    opacity:1;
+}
+
+.lian-img:hover {
+    background-size: 250%;
+}
+
+.back {
+    font-family: 'Arial', serif;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    color:#fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:absolute;
+    overflow:hidden;
+    margin: 20px 20px;
+    left:2.5vw;
+    top:5%;
+    z-index:3;
+
+  }
+
+  a, a:visited {
+    color: inherit;
+}
+  
+  .back:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background : #fff;
+    left: 100%;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.3;
+  }
+  
+  .back:hover:before {
+    width: 100%;
+    left:0;
+  }
